@@ -3,7 +3,7 @@ cheerio = require("cheerio");
 
 module.exports = function(robot) {
     robot.hear(/flickr me (.*)/, function(response) {
-        var topic = response.match[1];
+        topic = response.match[1];
         var target_url = "https://www.flickr.com/search/?text=" + topic;
         robot.http(target_url).get()(function(err, res, body) {
             if (res.statusCode!= 200) {
