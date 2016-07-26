@@ -1,5 +1,18 @@
+// Description:
+//   回傳指定搜尋條件的最新圖片
+//
+// Dependencies:
+//   "cheerio": "0.20.0"
+//
+// Configuration:
+//   None
+//
+// Commands:
+//   hubot flickr me <search>- 搜尋最新圖片
+//
+// Author:
+//   PhyrexTsai
 cheerio = require("cheerio");
-//HOST = 'https://www.flickr.com/search/?text=lego';
 
 module.exports = function(robot) {
     robot.hear(/flickr me (.*)/, function(response) {
